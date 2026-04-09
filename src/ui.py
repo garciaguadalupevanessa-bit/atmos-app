@@ -48,7 +48,8 @@ def capturar_datos_estacion():
 
 # 3. EL ARRANCADOR (Indispensable para que funcione el Play)
 if __name__ == "__main__":
-    registro = capturar_datos_estacion()
-    if registro:
-        print("\n✅ DATOS GUARDADOS:")
-        print(registro)
+
+    datos = capturar_datos_estacion()
+    print("\n✅ Datos validados correctamente:")
+    print(datos)
+    
