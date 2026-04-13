@@ -56,22 +56,3 @@ def guardar_registro(nuevo_registro: Dict[str, Any], datos: List[Dict[str, Any]]
     except Exception:
         # Gestión de errores de escritura
         return False
-
-def consultar_por_zona(zona: str, datos: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """
-    Filtra los registros meteorológicos de una zona específica.
-
-    La búsqueda no distingue entre mayúsculas y minúsculas para evitar errores del 
-    usuario.
-
-    Args:
-        zona (str): Nombre de la zona geográfica a filtrar.
-        datos (List[Dict[str, Any]]): Lista de diccionarios que contiene el 
-            histórico completo de mediciones en memoria.
-
-    Returns:
-        List[Dict[str, Any]]: Lista que contiene los 
-            registros que coinciden con la zona proporcionada. Si no hay 
-            coincidencias, devuelve una lista vacía [].
-    """
-    return [r for r in datos if r['zona'].lower() == zona.lower()]
