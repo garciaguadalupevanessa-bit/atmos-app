@@ -10,4 +10,5 @@ ENV/
 *$py.class
 
 # Logs
-logs/*.log
+logs/
+*.log
