@@ -1,15 +1,24 @@
-import os
+import subprocess
 import platform
 from datetime import datetime
+from logger import log_warning
 
 def limpiar_pantalla():
     """
     Limpia la consola dependiendo del sistema operativo.
     """
-    if platform.system() == "Windows":
-        os.system('cls')
-    else:
-        os.system('clear')
+    try:
+        print("\033[H\033[2J", end="", flush=True)
+
+        # En caso de que el código ANSII no funcione
+        # Definir el comando según el sistema operativo
+        es_windows = platform.system() == "Windows"
+        comando = "cls" if es_windows else "clear"
+        subprocess.run(comando, shell=es_windows, check=True)
+        
+    except Exception as e:
+        log_warning(f"No se pudo limpiar la pantalla: {e}")
+        print("\033[H\033[2J", end="")
 
 def imprimir_encabezado_h1(titulo):
     """
