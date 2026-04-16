@@ -1,0 +1,21 @@
+# Entornos Virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+logs/
+*.log
+
+# macOS
+.DS_Store
+
+# pytest
+.pytest_cache/
+
