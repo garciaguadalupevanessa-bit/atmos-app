@@ -9,6 +9,7 @@ from utils import (
     imprimir_encabezado_h1, 
     limpiar_pantalla 
 )
+
 def solicitar_fecha(msg_fecha: str) -> str:
     """
     Solicita una fecha al usuario por consola con opción de valor por defecto.
