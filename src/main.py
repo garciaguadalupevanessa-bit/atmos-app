@@ -313,7 +313,7 @@ def ver_historico():
                 if r.get("mensajes"):
                     print(f"   {formatear_texto('Alertas')}:")
                     for alerta in r["mensajes"]:
-                        print(f"      - {alerta}")
+                        print(f"        - {alerta}")
                 else:
                     print("Sin Alertas.\n")
                 print('.' * 50)
